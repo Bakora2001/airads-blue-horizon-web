@@ -1,4 +1,3 @@
-
 const WelcomeSection = () => {
   const features = [
     {
@@ -45,37 +44,83 @@ const WelcomeSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Welcome Header */}
-        <div className="text-center mb-4">
-          <h1 className="text-6xl font-bold text-blue-800 mb-6 animate-fade-in">
-            Welcome to AIRADS College
-          </h1>
+        {/* Welcome and Why Join Us - Side by Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Welcome Message */}
+          <div className="bg-white p-8 rounded-xl shadow-lg animate-fade-in">
+            <h1 className="text-3xl font-bold text-blue-800 mb-6">
+              Welcome to AIRADS College
+            </h1>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Welcome to AIRADS College a national TVET technical training college. We are the best college 
+                registered and licensed by TVETA, a Centre of Excellence where Quality is nurtured.
+              </p>
+              <p>
+                We focus on Technical vocational Education and training TVET - TVET education worldwide is seen 
+                as a tool that empowers trainees with practical skills.
+              </p>
+            </div>
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+              <p className="text-blue-800 font-semibold">Centre of Excellence</p>
+              <p className="text-blue-600 text-sm">Where Quality is nurtured</p>
+            </div>
+          </div>
+
+          {/* Why Join Us */}
+          <div className="bg-white p-8 rounded-xl shadow-lg animate-fade-in">
+            <h2 className="text-3xl font-bold text-blue-800 mb-6">
+              Why Join AIRADS College?
+            </h2>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="text-2xl">🏆</div>
+                <div>
+                  <h3 className="font-semibold text-blue-700">Excellent Results</h3>
+                  <p className="text-gray-600 text-sm">90-100% pass rate consistently for 18 years</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="text-2xl">👨‍🏫</div>
+                <div>
+                  <h3 className="font-semibold text-blue-700">Expert Faculty</h3>
+                  <p className="text-gray-600 text-sm">Qualified and experienced trainers</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="text-2xl">🌍</div>
+                <div>
+                  <h3 className="font-semibold text-blue-700">National Presence</h3>
+                  <p className="text-gray-600 text-sm">6 campuses across the country</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="text-2xl">🏭</div>
+                <div>
+                  <h3 className="font-semibold text-blue-700">Practical Training</h3>
+                  <p className="text-gray-600 text-sm">Industrial attachment & real-world skills</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-800 mb-6 animate-fade-in">
-            Why Join AIRADS College?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            Welcome to AIRADS College, a national TVET technical training college. We are the best college 
-            registered and licensed by TVETA, a Centre of Excellence where Quality is nurtured.
-          </p>
-        </div>
-
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in"
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-6 animate-pulse">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-blue-800 mb-4">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div className="text-4xl mb-4 animate-pulse">{feature.icon}</div>
+              <h3 className="text-lg font-bold text-blue-800 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
+        {/* How to Apply Section - Keeping Original Design */}
         <div className="bg-gradient-to-br from-blue-800 via-blue-700 to-red-600 text-white p-10 rounded-2xl shadow-2xl animate-fade-in">
           <h3 className="text-4xl font-bold mb-8 text-center animate-scale-in">How to Apply or Register</h3>
           
