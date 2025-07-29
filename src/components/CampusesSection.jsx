@@ -1,46 +1,55 @@
+import campusImage from "../assets/kericho-campus.jpg";
+import campusImage1 from "../assets/lodwar-campus.jpg";
+import campusImage2 from "../assets/eldoret.jpg";
+import campusImage3 from "../assets/lodwar-campus.jpg";
+import campusImage4 from "../assets/kisumu-campus.jpg";
+import campusImage5 from "../assets/nakuru-campus.jpg";
+import campusImage6 from "../assets/nakuru.jpg";
+import { Link } from "react-router-dom";
+
 
 const CampusesSection = () => {
   const campuses = [
     {
       name: "KERICHO TOWN CAMPUS",
       phone: "0729-976-885",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+      image: campusImage,
       description: "Located in the heart of Kericho, offering comprehensive technical programs."
     },
     {
       name: "ELDORET TOWN CAMPUS",
       phone: "0715-696-979",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      image: campusImage1,
       description: "Modern facilities in Eldoret serving the Rift Valley region."
     },
     {
       name: "BUNGOMA TOWN CAMPUS",
       phone: "0715-771-316",
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
+      image: campusImage2,
       description: "Strategic location in Bungoma with state-of-the-art equipment."
     },
     {
       name: "LODWAR TOWN CAMPUS",
       phone: "0723-555-999",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+      image: campusImage3,
       description: "Serving the Turkana region with quality technical education."
     },
     {
       name: "KISUMU CITY CAMPUS",
       phone: "0715-505-262",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      image: campusImage4,
       description: "Located in the lakeside city, offering diverse programs."
     },
     {
       name: "NAKURU CAMPUS",
       phone: "0711-488-302",
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
+      image: campusImage5,
       description: "Central location serving students across Kenya."
     },
     {
       name: "MARALAL CAMPUS",
       phone: "0723-555-999",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+      image: campusImage6,
       description: "Bringing quality education to Northern Kenya."
     }
   ];
@@ -92,18 +101,22 @@ const CampusesSection = () => {
         </div>
 
         {/* Special Offer Section */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-r from-red-600 to-blue-800 text-white p-8 rounded-xl text-center">
-            <h3 className="text-3xl font-bold mb-4">SPECIAL OFFER ON 14 COMPUTER PACKAGES</h3>
-            <p className="text-xl mb-6 max-w-4xl mx-auto">
-              We offer special offers on 14 computer packages and partial sponsorship for the same if you pursue 
-              Artisan, Certificate or Diploma Course at AIRADS College.
-            </p>
-            <button className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
-              Learn More About Offers
-            </button>
-          </div>
-        </div>
+<div className="mt-16">
+  <div className="bg-gradient-to-r from-red-600 to-blue-800 text-white p-8 rounded-xl text-center">
+    <h3 className="text-3xl font-bold mb-4">SPECIAL OFFER ON 14 COMPUTER PACKAGES</h3>
+    <p className="text-xl mb-6 max-w-4xl mx-auto">
+      We offer special offers on 14 computer packages and partial sponsorship for the same if you pursue 
+      Artisan, Certificate or Diploma Course at AIRADS College.
+    </p>
+    <Link
+      to="/admissions/procedure"
+      className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+    >
+      Learn More About Offers
+    </Link>
+  </div>
+</div>
+
       </div>
     </section>
   );

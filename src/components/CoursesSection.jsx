@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const CoursesSection = () => {
@@ -6,88 +5,130 @@ const CoursesSection = () => {
 
   const courses = [
     {
-      title: "Diploma in Electrical/Electronic Engineering(KNEC)",
-      description: "This is a two years course which aims at equipping learners with comprehensive knowledge in electrical and electronic systems.",
-      category: "Engineering",
-      level: "Diploma Course",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-    },
-    {
-      title: "Diploma in Information Communication Technology",
-      description: "This course offered at African Institute of Research and Development Studies focuses on modern ICT skills and applications.",
-      category: "Computer",
-      level: "Diploma Course",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-    },
-    {
       title: "Certificate in Project Management",
       description: "AIRADS College is the best technical college offering this comprehensive project management program.",
       category: "Business Management",
       level: "Certificate Courses",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+      image: "/src/assets/17.jpg"
     },
     {
       title: "Diploma in Planning and Project Management",
       description: "Course Overview: This two year diploma course offered at AIRADS focuses on strategic planning and project execution.",
       category: "Business Management",
       level: "Diploma Course",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      image: "/src/assets/course-2.jpg"
+    },
+    {
+      title: "Diploma in Electrical/Electronic Engineering (KNEC)",
+      description: "This is a two years course which aims at equipping learners with comprehensive knowledge in electrical and electronic systems.",
+      category: "Engineering",
+      level: "Diploma Course",
+      image: "/src/assets/course-3.webp"
+    },
+    {
+      title: "Diploma in Information Communication Technology",
+      description: "This course offered at African Institute of Research and Development Studies focuses on modern ICT skills and applications.",
+      category: "Computer",
+      level: "Diploma Course",
+      image: "/src/assets/course-4.jpg"
     },
     {
       title: "Certificate in Information Communication Technology",
-      description: "Certificate in Land Mapping and survey course is intended to provide foundational ICT skills.",
+      description: "Certificate in Information Communication Technology course is intended to provide foundational ICT skills.",
       category: "Computer",
       level: "Certificate Courses",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      image: "/src/assets/18.jpg"
     },
     {
       title: "Diploma in Land Mapping and Survey",
       description: "Course Overview: This two year diploma course offered at AIRADS covers comprehensive surveying techniques.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+      image: "/src/assets/course-6.webp"
+    },
+    {
+      title: "Certificate in Land Mapping and Survey",
+      description: "Certificate in Land Mapping and Survey course provides foundational skills in surveying and mapping techniques.",
+      category: "Engineering",
+      level: "Certificate Courses",
+      image: "src/assets/course-6.webp"
     },
     {
       title: "Certificate in Electrical Installation",
       description: "This Certificate course in Electrical Installation is designed to equip learners with necessary skills in electrical systems.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      image: "src/assets/course-8.webp"
     },
     {
-      title: "Certificate in Plumbing(KNEC)",
+      title: "Certificate in Plumbing (KNEC)",
       description: "Plumbing is the system of pipes, tanks, fittings, and other apparatus required for water supply and sanitation.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      // image: "/src/assets/"
     },
     {
-      title: "Artisan in Electrical and Electronic Technology(KNEC)",
+      title: "Artisan in Electrical and Electronic Technology (KNEC)",
       description: "This electrical and electronics technology program is designed for hands-on technical skills development.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      image: "src/assets/course-9.webp"
     },
     {
-      title: "Beauty Therapy Courses",
-      description: "NITA short courses in Beauty Therapy - 3 months duration focusing on professional beauty skills.",
-      category: "Beauty and Cosmetology",
+      title: "Artisan in Plumbing (KNEC)",
+      description: "Artisan course in plumbing focusing on practical skills in water supply and sanitation systems.",
+      category: "Engineering",
+      level: "Artisan Courses",
+      image: "src/assets/course-1.webp"
+    },
+    {
+      title: "Artisan in Electrical Installation (KNEC)",
+      description: "Hands-on artisan course in electrical installation covering practical electrical systems.",
+      category: "Engineering",
+      level: "Artisan Courses",
+      image: "src/assets/course-8.webp"
+    },
+    {
+      title: "Disaster Management",
+      description: "Comprehensive course in disaster management and emergency response planning.",
+      category: "Safety & Security",
+      level: "Certificate Courses",
+      // image: "/src/assets/36.jpg"
+    },
+    {
+      title: "Short Courses",
+      description: "Various short duration courses designed for quick skill acquisition and professional development.",
+      category: "General",
       level: "Short Courses",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+      image: "src/assets/course-12.jpg"
     },
     {
-      title: "Computer Packages",
+      title: "NITA Courses",
+      description: "National Industrial Training Authority approved courses for professional certification.",
+      category: "Professional",
+      level: "Certificate Courses",
+      image: "/src/assets/course-13.jpg"
+    },
+    {
+      title: "Packages (Computer Packages)",
       description: "Introduction to computers and various software applications for modern workplace skills.",
       category: "Computer",
       level: "Short Courses",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      image: "/src/assets/ict.jpeg"
     },
     {
-      title: "Web Development",
-      description: "Comprehensive web development course covering modern programming languages and frameworks.",
-      category: "Programming",
-      level: "Certificate Courses",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      title: "Engineering",
+      description: "Comprehensive engineering programs covering various technical disciplines and practical applications.",
+      category: "Engineering",
+      level: "Diploma Course",
+      image: "/src/assets/electrical-1.jpg"
+    },
+    {
+      title: "Beauty",
+      description: "Beauty therapy and cosmetology courses focusing on professional beauty skills and techniques.",
+      category: "Beauty and Cosmetology",
+      level: "Short Courses",
+      image: "/src/assets/beauty-1.JPG"
     }
   ];
 
@@ -111,9 +152,10 @@ const CoursesSection = () => {
     "Computer",
     "Diploma Course",
     "Engineering",
-    "Programming",
-    "Technology",
-    "Web Development"
+    "General",
+    "Professional",
+    "Safety & Security",
+    "Short Courses"
   ];
 
   const filteredCourses = activeFilter === "All Courses" 
@@ -134,7 +176,7 @@ const CoursesSection = () => {
 
         {/* Schools Section */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-blue-800">Our Schools</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-blue-800">Our Campuses</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {schools.map((school, index) => (
               <div
@@ -207,15 +249,21 @@ const CoursesSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl">
-            <h3 className="text-3xl font-bold mb-4">JULY 2025 INTAKE ONGOING</h3>
-            <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
-            <button className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
-              APPLY NOW
-            </button>
-          </div>
-        </div>
+<div className="mt-16 text-center">
+  <div className="bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl">
+    <h3 className="text-3xl font-bold mb-4">JULY 2025 INTAKE ONGOING</h3>
+    <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
+    <a
+      href="https://admissions.airads.ac.ke/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+    >
+      APPLY NOW
+    </a>
+  </div>
+</div>
+
       </div>
     </section>
   );

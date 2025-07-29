@@ -1,33 +1,55 @@
-
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import logo from "../assets/airads-logo.png";
 
 const MainNavbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const timeoutRef = useRef(null);
 
   const handleMouseEnter = (dropdown) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setOpenDropdown(dropdown);
   };
 
   const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
     setOpenDropdown(null);
   };
 
   return (
-    <nav className="bg-white shadow-lg border-b-4 border-blue-600 sticky top-0 z-50">
+    <nav className="fixed top-6 left-0 w-full z-40 bg-white/90 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-3xl font-bold text-blue-800">
-              AIRADS <span className="text-red-600">COLLEGE</span>
+        <div className="flex justify-between items-center py-2">
+          {/* Logo and Institution Name */}
+          <div className="flex items-center space-x-4">
+            <Link to="/">
+              <img src={logo} alt="AIRADS College Logo" className="h-12 md:h-14" />
+            </Link>
+            <div className="hidden md:block">
+              <h1 className="text-blue-800  font-bold text-lg leading-tight">
+                AFRICAN INSTITUTE <br/>
+                <span className="text-red-600"> Of Research and Development Studies</span>
+              </h1>
             </div>
           </div>
 
           {/* Navigation Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm whitespace-nowrap">
               Home
             </Link>
 
@@ -37,18 +59,22 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                About Us <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                About Us <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'about' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/about/mission" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/about/mission" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Mission and Vision
                   </Link>
-                  <Link to="/about/history" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/about/history" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Our History
                   </Link>
-                  <Link to="/about/why-study" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/about/why-study" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Why Study at Airads
                   </Link>
                 </div>
@@ -61,21 +87,25 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('admissions')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Admissions <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                Admissions <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'admissions' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/admissions/procedure" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/admissions/procedure" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Application Procedure
                   </Link>
-                  <Link to="/admissions/forms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/admissions/forms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Application Forms
                   </Link>
-                  <Link to="/admissions/apply-online" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="https://admissions.airads.ac.ke/" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Apply Online
                   </Link>
-                  <Link to="/admissions/career-guide" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/admissions/career-guide" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Career Guide & Prospectus
                   </Link>
                 </div>
@@ -88,33 +118,37 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('campuses')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Campuses <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                Campuses <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'campuses' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/campuses/bungoma" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/campuses/bungoma" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Bungoma
                   </Link>
-                  <Link to="/campuses/kericho" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/kericho" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Kericho
                   </Link>
-                  <Link to="/campuses/eldoret" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/eldoret" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Eldoret
                   </Link>
-                  <Link to="/campuses/kisumu" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/kisumu" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Kisumu
                   </Link>
-                  <Link to="/campuses/nakuru" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/nakuru" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Nakuru
                   </Link>
-                  <Link to="/campuses/lodwar" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/lodwar" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Lodwar
                   </Link>
-                  <Link to="/campuses/maralal" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/maralal" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Maralal
                   </Link>
-                  <Link to="/campuses/virtual" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/campuses/virtual" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Virtual Campus
                   </Link>
                 </div>
@@ -127,27 +161,31 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('schools')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Schools <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                Schools <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'schools' && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/schools/engineering-ict" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-72 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/schools/engineering-ict" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     School of Engineering and ICT
                   </Link>
-                  <Link to="/schools/hospitality-tourism" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/schools/hospitality-tourism" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     School of Hospitality and Tourism MGT
                   </Link>
-                  <Link to="/schools/health-social" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/schools/health-social" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     School of Health and Social Sciences
                   </Link>
-                  <Link to="/schools/beauty-hairdressing" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/schools/beauty-hairdressing" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     School of Beauty and Hair dressing
                   </Link>
-                  <Link to="/schools/media" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/schools/media" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     School of Media
                   </Link>
-                  <Link to="/schools/nita-courses" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/schools/nita-courses" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     NITA courses & Short Courses
                   </Link>
                 </div>
@@ -160,22 +198,26 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('news')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                News <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                Events <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'news' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/news/latest" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Latest News
-                  </Link>
-                  <Link to="/news/events" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/news/latest" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Events & Upcoming Events
+                  </Link>
+                  <Link to="/news/events" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    Latest News
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link to="/students" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link to="/students" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm whitespace-nowrap">
               Students
             </Link>
 
@@ -185,15 +227,19 @@ const MainNavbar = () => {
               onMouseEnter={() => handleMouseEnter('contact')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Contact Us <ChevronDown className="ml-1 h-4 w-4" />
+              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm py-2 whitespace-nowrap">
+                Contact Us <ChevronDown className="ml-1 h-3 w-3" />
               </button>
               {openDropdown === 'contact' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg border z-50">
-                  <Link to="/contact/contacts" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <Link to="/contact/contacts" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Our Contacts
                   </Link>
-                  <Link to="/contact/inquiries" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  <Link to="/contact/inquiries" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Inquiries
                   </Link>
                 </div>

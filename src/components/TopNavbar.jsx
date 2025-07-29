@@ -1,16 +1,15 @@
-
 import { Link } from "react-router-dom";
 
 const TopNavbar = () => {
   return (
-    <div className="bg-blue-900 text-white py-2 text-sm">
+    <div className="bg-blue-900 text-white py-1 text-sm fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="text-xs">Quick Links:</div>
           <div className="flex space-x-4 text-xs">
-            <Link to="/admissions" className="hover:text-red-300 transition-colors">
+            <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
               Online Admissions
-            </Link>
+            </a>
             <a href="https://tveta.go.ke" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
               TVETA
             </a>
