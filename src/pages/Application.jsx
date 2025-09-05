@@ -146,7 +146,7 @@ const Application = () => {
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <Badge className="mb-6 text-lg px-6 py-2 bg-gradient-to-r from-airads-blue to-airads-red text-white border-0">
-              AUGUST 2025 INTAKE NOW OPEN
+              September 2025 INTAKE NOW OPEN
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-airads-blue to-airads-red bg-clip-text text-transparent">
               AFRICAN INSTITUTE OF RESEARCH<br />
@@ -352,7 +352,7 @@ const Application = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
                   <Calendar className="mr-2 h-5 w-5" />
-                  Apply for AUgusty 2025 Intake
+                  Apply for September 2025 Intake
                 </Button>
                 <Link to="/admissions/forms">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

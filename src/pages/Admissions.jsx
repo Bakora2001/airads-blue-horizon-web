@@ -80,7 +80,7 @@ const Admissions = () => {
           </div>
 
           <div className="mt-16 bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl text-center">
-            <h3 className="text-3xl font-bold mb-4">AUGUST 2025 INTAKE ONGOING</h3>
+            <h3 className="text-3xl font-bold mb-4"> September 2025 INTAKE ONGOING</h3>
             <p className="text-xl mb-6">Don't miss this opportunity to join Kenya's premier technical college</p>
             <button className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
               APPLY NOW

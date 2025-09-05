@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import TopNavbar from "../components/TopNavbar";
 import MainNavbar from "../components/MainNavbar";
+import Footer from "../components/Footer";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -413,23 +414,7 @@ const Events = () => {
       )}
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-4">
-        <div className="container mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-slate-300 bg-clip-text text-transparent">
-            AIRADS College
-          </h3>
-          <p className="text-slate-400 mb-6">Stay connected with the latest news and events</p>
-          <div className="flex justify-center space-x-6 mb-6">
-            <Badge className="bg-blue-600/20 text-blue-400 border-blue-600">events</Badge>
-            <Badge className="bg-slate-600/20 text-slate-400 border-slate-600">
-              {events.length} posts
-            </Badge>
-          </div>
-          <p className="text-sm text-slate-500">
-            © 2025 AIRADS College. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

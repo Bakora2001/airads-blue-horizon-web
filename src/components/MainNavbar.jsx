@@ -74,9 +74,7 @@ const MainNavbar = () => {
                   <Link to="/about/history" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Our History
                   </Link>
-                  <Link to="/about/why-study" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    Why Study at Airads
-                  </Link>
+                
                 </div>
               )}
             </div>
@@ -208,10 +206,7 @@ const MainNavbar = () => {
                   onMouseLeave={handleDropdownMouseLeave}
                 >
                   <Link to="/news/latest" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    Events & Upcoming Events
-                  </Link>
-                  <Link to="/news/events" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    Latest News
+                    Events & News
                   </Link>
                 </div>
               )}
@@ -236,11 +231,8 @@ const MainNavbar = () => {
                   onMouseEnter={handleDropdownMouseEnter}
                   onMouseLeave={handleDropdownMouseLeave}
                 >
-                  <Link to="/contact/contacts" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link to="/contact/" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Our Contacts
-                  </Link>
-                  <Link to="/contact/inquiries" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    Inquiries
                   </Link>
                 </div>
               )}
