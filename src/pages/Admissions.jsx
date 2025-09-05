@@ -85,6 +85,7 @@ const Admissions = () => {
             <button className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
               APPLY NOW
             </button>
+
           </div>
         </div>
       </div>

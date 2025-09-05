@@ -165,14 +165,18 @@ const Application = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-airads-blue to-airads-blue-dark hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
-                <Globe className="mr-2 h-5 w-5" />
-                Apply Online Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-airads-red text-airads-red hover:bg-airads-red hover:text-white">
-                <Phone className="mr-2 h-5 w-5" />
-                Contact Admissions
-              </Button>
+              <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-gradient-to-r from-airads-blue to-airads-blue-dark hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
+                  <Globe className="mr-2 h-5 w-5" />
+                  Apply Online Now
+                </Button>
+              </a>
+              <a href="https://wa.me/254723555999" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-airads-red text-airads-red hover:bg-airads-red hover:text-white">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Contact Admissions
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -350,15 +354,17 @@ const Application = () => {
                 Join thousands of successful graduates from AIRADS College
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Apply for September 2025 Intake
-                </Button>
-                <Link to="/admissions/forms">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Apply for September 2025 Intake
+                  </Button>
+                </a>
+                <a href="https://airads.ac.ke/bronchure/UNIVERSAL%20BROCHURE-compressed.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/10">
                     Download Application Forms
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
