@@ -42,7 +42,7 @@ const Campuses = () => {
     },
     {
       name: "NAKURU CAMPUS",
-      phone: "0711-488-302",
+      phone: "",
       location: "Nakuru Town",
       image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
       description: "Centrally located campus serving students from across Kenya with excellent connectivity."

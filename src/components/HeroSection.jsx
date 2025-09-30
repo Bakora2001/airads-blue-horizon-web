@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const images = [
-    'src/assets/63.JPG',
-    'src/assets/68.JPG',
-    'src/assets/6.7.JPG',
-    'src/assets/7.1.JPG',
-    'src/assets/11.jpg',
-    'src/assets/14 (2).jpg',
-    'src/assets/17.jpg',
-    'src/assets/31.jpg',
-    'src/assets/33.JPG'
+    'src/public/63.JPG',
+    'src/public/68.JPG',
+    'src/public/6.7.JPG',
+    'src/public/7.1.JPG',
+    'src/public/11.jpg',
+    'src/public/14 (2).jpg',
+    'src/public/17.jpg',
+    'src/public/31.jpg',
+    'src/public/33.JPG'
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

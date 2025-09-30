@@ -1,7 +1,7 @@
 // import { useState, useRef } from "react";
 // import { Link } from "react-router-dom";
 // import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
-// import logo from "../assets/airads-logo.png";
+// import logo from "../public/airads-logo.png";
 
 // const MainNavbar = () => {
 //   const [openDropdown, setOpenDropdown] = useState(null);
@@ -492,7 +492,7 @@
 
 import { useState, useRef } from "react";
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
-import logo from "../assets/airads-logo.png";
+import logo from "../public/airads-logo.png";
 
 // Simple Link component replacement
 const Link = ({ to, onClick, className, children }) => (

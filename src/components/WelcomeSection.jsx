@@ -77,7 +77,7 @@ const WelcomeSection = () => {
             <div className="lg:col-span-2 relative">
               <div className="h-full min-h-[400px] lg:min-h-[500px] relative overflow-hidden">
                 <img 
-                  src="/src/assets/ceo-min.png" 
+                  src="/src/public/ceo-min.png" 
                   alt="AIRADS College CEO" 
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
@@ -261,11 +261,11 @@ const WelcomeSection = () => {
                 <p className="text-blue-100 mb-3">Contact our main office for general inquiries</p>
                 <div className="flex space-x-3">
                   <button 
-                    onClick={() => handlePhoneCall('0723-555-999')}
+                    onClick={() => handlePhoneCall('0723555999')}
                     className="bg-white/10 hover:bg-white/30 p-3 rounded-lg transition-all duration-300 flex-1 group"
                   >
                     <span className="text-yellow-200 font-semibold group-hover:text-yellow-100">
-                      📞 0723-555-999
+                      📞 0723555999
                     </span>
                   </button>
                   <button 

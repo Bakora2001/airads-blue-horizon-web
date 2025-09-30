@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Contact = () => {
   const campusContacts = [
     { name: "ELDORET Campus", phone: "0715-696-979" },
-    { name: "NAKURU Campus", phone: "0711-488-302" },
+    { name: "NAKURU Campus", phone: "" },
     { name: "KERICHO Campus", phone: "0729-976-885" },
     { name: "KISUMU Campus", phone: "0715-505-262" },
     { name: "BUNGOMA Campus", phone: "0715-771-316" },

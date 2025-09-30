@@ -285,8 +285,8 @@ const Nakuru = () => {
 
           <div>
             <ContactCard
-              phone="0711-488-302"
-              whatsapp="0711-488-302"
+              phone=""
+              whatsapp=""
               email="nakuru@airads.ac.ke"
               address="Nakuru Town, Nakuru County"
             />

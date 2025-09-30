@@ -9,126 +9,126 @@ const CoursesSection = () => {
       description: "AIRADS College is the best technical college offering this comprehensive project management program.",
       category: "Business Management",
       level: "Certificate Courses",
-      image: "/src/assets/17.jpg"
+      image: "/src/public/17.jpg"
     },
     {
       title: "Diploma in Planning and Project Management",
       description: "Course Overview: This two year diploma course offered at AIRADS focuses on strategic planning and project execution.",
       category: "Business Management",
       level: "Diploma Course",
-      image: "/src/assets/course-2.jpg"
+      image: "/src/public/course-2.jpg"
     },
     {
       title: "Diploma in Electrical/Electronic Engineering (KNEC)",
       description: "This is a two years course which aims at equipping learners with comprehensive knowledge in electrical and electronic systems.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/assets/course-3.webp"
+      image: "/src/public/course-3.webp"
     },
     {
       title: "Diploma in Information Communication Technology",
       description: "This course offered at African Institute of Research and Development Studies focuses on modern ICT skills and applications.",
       category: "Computer",
       level: "Diploma Course",
-      image: "/src/assets/course-4.jpg"
+      image: "/src/public/course-4.jpg"
     },
     {
       title: "Certificate in Information Communication Technology",
       description: "Certificate in Information Communication Technology course is intended to provide foundational ICT skills.",
       category: "Computer",
       level: "Certificate Courses",
-      image: "/src/assets/18.jpg"
+      image: "/src/public/18.jpg"
     },
     {
       title: "Diploma in Land Mapping and Survey",
       description: "Course Overview: This two year diploma course offered at AIRADS covers comprehensive surveying techniques.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/assets/course-6.webp"
+      image: "/src/public/course-6.webp"
     },
     {
       title: "Certificate in Land Mapping and Survey",
       description: "Certificate in Land Mapping and Survey course provides foundational skills in surveying and mapping techniques.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "src/assets/course-6.webp"
+      image: "src/public/course-6.webp"
     },
     {
       title: "Certificate in Electrical Installation",
       description: "This Certificate course in Electrical Installation is designed to equip learners with necessary skills in electrical systems.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "src/assets/course-8.webp"
+      image: "src/public/course-8.webp"
     },
     {
       title: "Certificate in Plumbing (KNEC)",
       description: "Plumbing is the system of pipes, tanks, fittings, and other apparatus required for water supply and sanitation.",
       category: "Engineering",
       level: "Certificate Courses",
-      // image: "/src/assets/"
+      // image: "/src/public/"
     },
     {
       title: "Artisan in Electrical and Electronic Technology (KNEC)",
       description: "This electrical and electronics technology program is designed for hands-on technical skills development.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/assets/course-9.webp"
+      image: "src/public/course-9.webp"
     },
     {
       title: "Artisan in Plumbing (KNEC)",
       description: "Artisan course in plumbing focusing on practical skills in water supply and sanitation systems.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/assets/course-1.webp"
+      image: "src/public/course-1.webp"
     },
     {
       title: "Artisan in Electrical Installation (KNEC)",
       description: "Hands-on artisan course in electrical installation covering practical electrical systems.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/assets/course-8.webp"
+      image: "src/public/course-8.webp"
     },
     {
       title: "Disaster Management",
       description: "Comprehensive course in disaster management and emergency response planning.",
       category: "Safety & Security",
       level: "Certificate Courses",
-      // image: "/src/assets/36.jpg"
+      // image: "/src/public/36.jpg"
     },
     {
       title: "Short Courses",
       description: "Various short duration courses designed for quick skill acquisition and professional development.",
       category: "General",
       level: "Short Courses",
-      image: "src/assets/course-12.jpg"
+      image: "src/public/course-12.jpg"
     },
     {
       title: "NITA Courses",
       description: "National Industrial Training Authority approved courses for professional certification.",
       category: "Professional",
       level: "Certificate Courses",
-      image: "/src/assets/course-13.jpg"
+      image: "/src/public/course-13.jpg"
     },
     {
       title: "Packages (Computer Packages)",
       description: "Introduction to computers and various software applications for modern workplace skills.",
       category: "Computer",
       level: "Short Courses",
-      image: "/src/assets/ict.jpeg"
+      image: "/src/public/ict.jpeg"
     },
     {
       title: "Engineering",
       description: "Comprehensive engineering programs covering various technical disciplines and practical applications.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/assets/electrical-1.jpg"
+      image: "/src/public/electrical-1.jpg"
     },
     {
       title: "Beauty",
       description: "Beauty therapy and cosmetology courses focusing on professional beauty skills and techniques.",
       category: "Beauty and Cosmetology",
       level: "Short Courses",
-      image: "/src/assets/beauty-1.JPG"
+      image: "/src/public/beauty-1.JPG"
     }
   ];
 

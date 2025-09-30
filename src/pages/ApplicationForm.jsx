@@ -49,7 +49,7 @@ const ApplicationForm = () => {
       key: "nakuru",
       description: "Application form and brochure for Nakuru Campus",
       location: "TradeWorld Building 2nd Floor, Opposite Prestige Mall, Kijabe Row",
-      contact: "0711-488-302",
+      contact: "0711488302",
       color: "from-blue-500 to-blue-700",
       hasForm: true
     },

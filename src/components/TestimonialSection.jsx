@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import partner logos
-import kattiLogo from '../assets/katti-logo.png';
-import knecLogo from '../assets/logo_knec_new.png';
-import moeLogo from '../assets/MOE-logo.jpg';
-import nitaLogo from '../assets/NITA-Logo.png';
-import tvetCdaccLogo from '../assets/TVET-CDACC-logo.png';
-import tvetaLogo from '../assets/TVETA-web-Logo.png';
+import kattiLogo from '../public/katti-logo.png';
+import knecLogo from '../public/logo_knec_new.png';
+import moeLogo from '../public/MOE-logo.jpg';
+import nitaLogo from '../public/NITA-Logo.png';
+import tvetCdaccLogo from '../public/TVET-CDACC-logo.png';
+import tvetaLogo from '../public/TVETA-web-Logo.png';
 
 const testimonials = [
   {

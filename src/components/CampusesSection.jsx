@@ -1,10 +1,10 @@
-import campusImage from "../assets/kericho-campus.jpg";
-import campusImage1 from "../assets/lodwar-campus.jpg";
-import campusImage2 from "../assets/eldoret.jpg";
-import campusImage3 from "../assets/lodwar-campus.jpg";
-import campusImage4 from "../assets/kisumu-campus.jpg";
-import campusImage5 from "../assets/nakuru-campus.jpg";
-import campusImage6 from "../assets/nakuru.jpg";
+import campusImage from "../public/kericho-campus.jpg";
+import campusImage1 from "../public/lodwar-campus.jpg";
+import campusImage2 from "../public/eldoret.jpg";
+import campusImage3 from "../public/lodwar-campus.jpg";
+import campusImage4 from "../public/kisumu-campus.jpg";
+import campusImage5 from "../public/nakuru-campus.jpg";
+import campusImage6 from "../public/nakuru.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -42,7 +42,7 @@ const CampusesSection = () => {
     },
     {
       name: "NAKURU CAMPUS",
-      phone: "0711-488-302",
+      phone: "0711488302",
       image: campusImage5,
       description: "Central location serving students across Kenya."
     },
