@@ -10,9 +10,9 @@ import {
   Calendar,
   Phone,
   Globe,
-  Facebook,
   Twitter
 } from "lucide-react";
+import { FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +31,7 @@ const Application = () => {
   }, []);
 
   const campuses = [
-    "ELDORET", "NAKURU", "KERICHO", "KISUMU", "BUNGOMA", "LODWAR"
+    "ELDORET", "NAKURU", "KERICHO", "KISUMU", "BUNGOMA", "MARALAL", "LODWAR"
   ];
 
   const whyChooseUs = [
@@ -127,12 +127,13 @@ const Application = () => {
   ];
 
   const contactMethods = [
-    { campus: "ELDORET", phone: "0715-696-979" },
-    { campus: "NAKURU", phone: "0711-488-302" },
-    { campus: "KERICHO", phone: "0729-976-885" },
-    { campus: "KISUMU", phone: "0715-505-262" },
-    { campus: "BUNGOMA", phone: "0715-771-316" },
-    { campus: "LODWAR", phone: "Coming Soon" }
+    { campus: "ELDORET", phone: "0715696979" },
+    { campus: "NAKURU", phone: "0711488302" },
+    { campus: "KERICHO", phone: "0729976885" },
+    { campus: "KISUMU", phone: "0715057262" },
+    { campus: "BUNGOMA", phone: "0715771316" },
+    { campus: "MARALAL", phone: "0717885888" },
+    { campus: "LODWAR", phone: "071981845" }
   ];
 
   return (
@@ -254,9 +255,6 @@ const Application = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Computer Application Packages
             </h2>
-            <p className="text-xl text-muted-foreground mb-4">
-              14 Computer Packages = Kshs 2,800/= only
-            </p>
             <Badge className="text-lg px-6 py-2 bg-gradient-to-r from-airads-red to-airads-red-dark text-white border-0">
               Certificate in Computer Applications Awarded
             </Badge>
@@ -330,7 +328,7 @@ const Application = () => {
                     <span className="text-sm">Apply online at www.airads.ac.ke</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
-                    <Facebook className="h-5 w-5 text-airads-blue" />
+                    <FaFacebook className="h-5 w-5 text-airads-blue" />
                     <span className="text-sm">Use Facebook inbox (Messenger)</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
@@ -338,7 +336,7 @@ const Application = () => {
                     <span className="text-sm">Visit any of our campus locations</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
-                    <Phone className="h-5 w-5 text-airads-blue" />
+                    <FaWhatsapp className="h-5 w-5 text-airads-blue" />
                     <span className="text-sm">Call/SMS/WhatsApp any campus</span>
                   </div>
                 </div>
@@ -357,7 +355,7 @@ const Application = () => {
                   <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
                     <Calendar className="mr-2 h-5 w-5" />
-                    Apply for September 2025 Intake
+                    Apply for August 2025 Intake
                   </Button>
                 </a>
                 <a href="https://airads.ac.ke/bronchure/UNIVERSAL%20BROCHURE-compressed.pdf" target="_blank" rel="noopener noreferrer">
@@ -380,7 +378,7 @@ const Application = () => {
           <p className="text-gray-400 mb-6">A Centre of Excellence Where Quality is Nurtured</p>
           <div className="flex justify-center space-x-6 mb-6">
             <Globe className="h-6 w-6 text-airads-blue hover:text-airads-red transition-colors cursor-pointer" />
-            <Facebook className="h-6 w-6 text-airads-blue hover:text-airads-red transition-colors cursor-pointer" />
+            <FaFacebook className="h-6 w-6 text-airads-blue hover:text-airads-red transition-colors cursor-pointer" />
             <Twitter className="h-6 w-6 text-airads-blue hover:text-airads-red transition-colors cursor-pointer" />
           </div>
           <p className="text-sm text-gray-500">

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const News = () => {
   const newsItems = [
     {
-      title: "JULY 2025 INTAKE ONGOING",
+      title: "August 2025 INTAKE ONGOING",
       date: "June 15, 2025",
       category: "Admissions",
       excerpt: "Applications are now open for the July 2025 intake across all our campuses. Join us for quality technical education.",

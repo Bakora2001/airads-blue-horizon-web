@@ -129,7 +129,7 @@ const UploadPage = ({ onLogout }) => {
 
   // Admin authentication
   const handleAdminLogin = () => {
-    if (adminPassword === 'airads2024') {
+    if (adminPassword === 'Tvet@upload') {
       setIsAdmin(true);
       setShowPasswordPrompt(false);
     } else {

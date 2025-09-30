@@ -17,13 +17,13 @@ const PageLayout = ({ children, title, subtitle, backgroundImage }) => {
         className="relative py-24 px-4 overflow-hidden"
         style={{
           background: backgroundImage 
-            ? `linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(245, 158, 11, 0.9) 100%), url(${backgroundImage})`
-            : 'linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(245, 158, 11) 100%)',
+            ? `linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%), url(${backgroundImage})`
+            : 'linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(59, 130, 246) 100%)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-amber-500/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-700/90 to-blue-500/90"></div>
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6 tracking-tight">
             {title}
@@ -87,14 +87,14 @@ const ContactCard = ({ phone, whatsapp, email, address, className }) => {
 
           {whatsapp && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
                 <p className="text-sm text-gray-500">WhatsApp</p>
                 <a 
                   href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`} 
-                  className="text-green-600 font-medium hover:text-green-800 transition-colors"
+                  className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -106,14 +106,14 @@ const ContactCard = ({ phone, whatsapp, email, address, className }) => {
 
           {email && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
                 <p className="text-sm text-gray-500">Email</p>
                 <a 
                   href={`mailto:${email}`} 
-                  className="text-purple-600 font-medium hover:text-purple-800 transition-colors"
+                  className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
                 >
                   {email}
                 </a>
@@ -123,7 +123,7 @@ const ContactCard = ({ phone, whatsapp, email, address, className }) => {
 
           {address && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gray-500 rounded-xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -238,13 +238,13 @@ const Kericho = () => {
                   <div className="text-white/90">Alumni</div>
                 </CardContent>
               </Card>
-              <Card className="bg-green-600 text-white shadow-lg border-0">
+              <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg border-0">
                 <CardContent className="p-6 text-center">
                   <div className="text-3xl font-bold mb-2">100%</div>
                   <div className="text-white/90">Pass Rate</div>
                 </CardContent>
               </Card>
-              <Card className="bg-purple-600 text-white shadow-lg border-0">
+              <Card className="bg-gradient-to-r from-blue-700 to-blue-800 text-white shadow-lg border-0">
                 <CardContent className="p-6 text-center">
                   <div className="text-3xl font-bold mb-2">8</div>
                   <div className="text-white/90">Years</div>

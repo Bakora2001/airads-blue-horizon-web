@@ -251,7 +251,7 @@ const CoursesSection = () => {
         {/* Call to Action */}
 <div className="mt-16 text-center">
   <div className="bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl">
-    <h3 className="text-3xl font-bold mb-4">JULY 2025 INTAKE ONGOING</h3>
+    <h3 className="text-3xl font-bold mb-4">AUGUST 2025 INTAKE ONGOING</h3>
     <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
     <a
       href="https://admissions.airads.ac.ke/"

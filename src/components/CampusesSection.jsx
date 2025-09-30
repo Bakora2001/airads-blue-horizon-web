@@ -12,31 +12,31 @@ const CampusesSection = () => {
   const campuses = [
     {
       name: "KERICHO TOWN CAMPUS",
-      phone: "0729-976-885",
+      phone: "0729976885",
       image: campusImage,
       description: "Located in the heart of Kericho, offering comprehensive technical programs."
     },
     {
       name: "ELDORET TOWN CAMPUS",
-      phone: "0715-696-979",
+      phone: "0715696979",
       image: campusImage1,
       description: "Modern facilities in Eldoret serving the Rift Valley region."
     },
     {
       name: "BUNGOMA TOWN CAMPUS",
-      phone: "0715-771-316",
+      phone: "0715771316",
       image: campusImage2,
       description: "Strategic location in Bungoma with state-of-the-art equipment."
     },
     {
       name: "LODWAR TOWN CAMPUS",
-      phone: "0723-555-999",
+      phone: "0723555999",
       image: campusImage3,
       description: "Serving the Turkana region with quality technical education."
     },
     {
       name: "KISUMU CITY CAMPUS",
-      phone: "0715-505-262",
+      phone: "0715505262",
       image: campusImage4,
       description: "Located in the lakeside city, offering diverse programs."
     },
@@ -48,7 +48,7 @@ const CampusesSection = () => {
     },
     {
       name: "MARALAL CAMPUS",
-      phone: "0723-555-999",
+      phone: "0723555999",
       image: campusImage6,
       description: "Bringing quality education to Northern Kenya."
     }
