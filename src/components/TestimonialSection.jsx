@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Import partner logos
-import kattiLogo from '../public/katti-logo.png';
-import knecLogo from '../public/logo_knec_new.png';
-import moeLogo from '../public/MOE-logo.jpg';
-import nitaLogo from '../public/NITA-Logo.png';
-import tvetCdaccLogo from '../public/TVET-CDACC-logo.png';
-import tvetaLogo from '../public/TVETA-web-Logo.png';
-
 const testimonials = [
   {
     id: 1,
@@ -44,13 +36,14 @@ const testimonials = [
   }
 ];
 
+// ✅ FIXED: Reference partner logos from root public folder
 const partners = [
-  { id: 1, name: "KATTI", logo: kattiLogo },
-  { id: 2, name: "KNEC", logo: knecLogo },
-  { id: 3, name: "Ministry of Education", logo: moeLogo },
-  { id: 4, name: "NITA", logo: nitaLogo },
-  { id: 5, name: "TVET CDACC", logo: tvetCdaccLogo },
-  { id: 6, name: "TVETA", logo: tvetaLogo }
+  { id: 1, name: "KATTI", logo: "/katti-logo.png" },
+  { id: 2, name: "KNEC", logo: "/logo_knec_new.png" },
+  { id: 3, name: "Ministry of Education", logo: "/MOE-logo.jpg" },
+  { id: 4, name: "NITA", logo: "/NITA-Logo.png" },
+  { id: 5, name: "TVET CDACC", logo: "/TVET-CDACC-logo.png" },
+  { id: 6, name: "TVETA", logo: "/TVETA-web-Logo.png" }
 ];
 
 const TestimonialSection = () => {
@@ -206,65 +199,65 @@ const TestimonialSection = () => {
       </section>
 
      {/* Our Partners Section */}
-<section className="py-12 bg-white">
-  <div className="container mx-auto px-4">
-    {/* Header */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
-        Our Partners
-      </h2>
-      <div className="h-1 w-20 bg-blue-600 rounded-full mx-auto"></div>
-    </div>
-    {/* Sliding Logos */}
-    <div className="relative overflow-hidden">
-      <div className="flex animate-scroll">
-        {/* First set of logos */}
-        {partners.map((partner) => (
-          <div
-            key={`first-${partner.id}`}
-            className="flex-shrink-0 w-48 h-32 mx-8 flex items-center justify-center"
-          >
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              className="max-w-full max-h-full object-contain transition-all duration-300"
-            />
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
+              Our Partners
+            </h2>
+            <div className="h-1 w-20 bg-blue-600 rounded-full mx-auto"></div>
           </div>
-        ))}
-        {/* Duplicate set for seamless loop */}
-        {partners.map((partner) => (
-          <div
-            key={`second-${partner.id}`}
-            className="flex-shrink-0 w-48 h-32 mx-8 flex items-center justify-center"
-          >
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              className="max-w-full max-h-full object-contain transition-all duration-300"
-            />
+          {/* Sliding Logos */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of logos */}
+              {partners.map((partner) => (
+                <div
+                  key={`first-${partner.id}`}
+                  className="flex-shrink-0 w-48 h-32 mx-8 flex items-center justify-center"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partners.map((partner) => (
+                <div
+                  key={`second-${partner.id}`}
+                  className="flex-shrink-0 w-48 h-32 mx-8 flex items-center justify-center"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-  {/* CSS Animation */}
-  <style>{`
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-    .animate-scroll:hover {
-      animation-play-state: paused;
-    }
-  `}</style>
-</section>
+        </div>
+        {/* CSS Animation */}
+        <style>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+      </section>
     </>
   );
 };

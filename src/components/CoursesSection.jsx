@@ -3,132 +3,133 @@ import { useState } from "react";
 const CoursesSection = () => {
   const [activeFilter, setActiveFilter] = useState("All Courses");
 
+  // ✅ If public folder is at root level, use these paths
   const courses = [
     {
       title: "Certificate in Project Management",
       description: "AIRADS College is the best technical college offering this comprehensive project management program.",
       category: "Business Management",
       level: "Certificate Courses",
-      image: "/src/public/17.jpg"
+      image: "/17.jpg"
     },
     {
       title: "Diploma in Planning and Project Management",
       description: "Course Overview: This two year diploma course offered at AIRADS focuses on strategic planning and project execution.",
       category: "Business Management",
       level: "Diploma Course",
-      image: "/src/public/course-2.jpg"
+      image: "/course-2.jpg"
     },
     {
       title: "Diploma in Electrical/Electronic Engineering (KNEC)",
       description: "This is a two years course which aims at equipping learners with comprehensive knowledge in electrical and electronic systems.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/public/course-3.webp"
+      image: "/course-3.webp"
     },
     {
       title: "Diploma in Information Communication Technology",
       description: "This course offered at African Institute of Research and Development Studies focuses on modern ICT skills and applications.",
       category: "Computer",
       level: "Diploma Course",
-      image: "/src/public/course-4.jpg"
+      image: "/course-4.jpg"
     },
     {
       title: "Certificate in Information Communication Technology",
       description: "Certificate in Information Communication Technology course is intended to provide foundational ICT skills.",
       category: "Computer",
       level: "Certificate Courses",
-      image: "/src/public/18.jpg"
+      image: "/18.jpg"
     },
     {
       title: "Diploma in Land Mapping and Survey",
       description: "Course Overview: This two year diploma course offered at AIRADS covers comprehensive surveying techniques.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/public/course-6.webp"
+      image: "/course-6.webp"
     },
     {
       title: "Certificate in Land Mapping and Survey",
       description: "Certificate in Land Mapping and Survey course provides foundational skills in surveying and mapping techniques.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "src/public/course-6.webp"
+      image: "/course-6.webp"
     },
     {
       title: "Certificate in Electrical Installation",
       description: "This Certificate course in Electrical Installation is designed to equip learners with necessary skills in electrical systems.",
       category: "Engineering",
       level: "Certificate Courses",
-      image: "src/public/course-8.webp"
+      image: "/course-8.webp"
     },
     {
       title: "Certificate in Plumbing (KNEC)",
       description: "Plumbing is the system of pipes, tanks, fittings, and other apparatus required for water supply and sanitation.",
       category: "Engineering",
       level: "Certificate Courses",
-      // image: "/src/public/"
+      image: "/course-1.webp"
     },
     {
       title: "Artisan in Electrical and Electronic Technology (KNEC)",
       description: "This electrical and electronics technology program is designed for hands-on technical skills development.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/public/course-9.webp"
+      image: "/course-9.webp"
     },
     {
       title: "Artisan in Plumbing (KNEC)",
       description: "Artisan course in plumbing focusing on practical skills in water supply and sanitation systems.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/public/course-1.webp"
+      image: "/course-1.webp"
     },
     {
       title: "Artisan in Electrical Installation (KNEC)",
       description: "Hands-on artisan course in electrical installation covering practical electrical systems.",
       category: "Engineering",
       level: "Artisan Courses",
-      image: "src/public/course-8.webp"
+      image: "/course-8.webp"
     },
     {
       title: "Disaster Management",
       description: "Comprehensive course in disaster management and emergency response planning.",
       category: "Safety & Security",
       level: "Certificate Courses",
-      // image: "/src/public/36.jpg"
+      image: "/36.jpg"
     },
     {
       title: "Short Courses",
       description: "Various short duration courses designed for quick skill acquisition and professional development.",
       category: "General",
       level: "Short Courses",
-      image: "src/public/course-12.jpg"
+      image: "/course-12.jpg"
     },
     {
       title: "NITA Courses",
       description: "National Industrial Training Authority approved courses for professional certification.",
       category: "Professional",
       level: "Certificate Courses",
-      image: "/src/public/course-13.jpg"
+      image: "/course-13.jpg"
     },
     {
       title: "Packages (Computer Packages)",
       description: "Introduction to computers and various software applications for modern workplace skills.",
       category: "Computer",
       level: "Short Courses",
-      image: "/src/public/ict.jpeg"
+      image: "/ict.jpeg"
     },
     {
       title: "Engineering",
       description: "Comprehensive engineering programs covering various technical disciplines and practical applications.",
       category: "Engineering",
       level: "Diploma Course",
-      image: "/src/public/electrical-1.jpg"
+      image: "/electrical-1.jpg"
     },
     {
       title: "Beauty",
       description: "Beauty therapy and cosmetology courses focusing on professional beauty skills and techniques.",
       category: "Beauty and Cosmetology",
       level: "Short Courses",
-      image: "/src/public/beauty-1.JPG"
+      image: "/beauty-1.JPG"
     }
   ];
 
@@ -249,20 +250,20 @@ const CoursesSection = () => {
         </div>
 
         {/* Call to Action */}
-<div className="mt-16 text-center">
-  <div className="bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl">
-    <h3 className="text-3xl font-bold mb-4">AUGUST 2025 INTAKE ONGOING</h3>
-    <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
-    <a
-      href="https://admissions.airads.ac.ke/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-    >
-      APPLY NOW
-    </a>
-  </div>
-</div>
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-800 to-red-600 text-white p-8 rounded-xl">
+            <h3 className="text-3xl font-bold mb-4">AUGUST 2025 INTAKE ONGOING</h3>
+            <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
+            <a
+              href="https://admissions.airads.ac.ke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              APPLY NOW
+            </a>
+          </div>
+        </div>
 
       </div>
     </section>

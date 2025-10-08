@@ -1,55 +1,47 @@
-import campusImage from "../public/kericho-campus.jpg";
-import campusImage1 from "../public/lodwar-campus.jpg";
-import campusImage2 from "../public/eldoret.jpg";
-import campusImage3 from "../public/lodwar-campus.jpg";
-import campusImage4 from "../public/kisumu-campus.jpg";
-import campusImage5 from "../public/nakuru-campus.jpg";
-import campusImage6 from "../public/nakuru.jpg";
 import { Link } from "react-router-dom";
-
 
 const CampusesSection = () => {
   const campuses = [
     {
       name: "KERICHO TOWN CAMPUS",
       phone: "0729976885",
-      image: campusImage,
+      image: "/kericho-campus.jpg",
       description: "Located in the heart of Kericho, offering comprehensive technical programs."
     },
     {
       name: "ELDORET TOWN CAMPUS",
       phone: "0715696979",
-      image: campusImage1,
+      image: "/eldoret.jpg",
       description: "Modern facilities in Eldoret serving the Rift Valley region."
     },
     {
       name: "BUNGOMA TOWN CAMPUS",
       phone: "0715771316",
-      image: campusImage2,
+      image: "/eldoret.jpg",
       description: "Strategic location in Bungoma with state-of-the-art equipment."
     },
     {
       name: "LODWAR TOWN CAMPUS",
       phone: "0723555999",
-      image: campusImage3,
+      image: "/lodwar-campus.jpg",
       description: "Serving the Turkana region with quality technical education."
     },
     {
       name: "KISUMU CITY CAMPUS",
       phone: "0715505262",
-      image: campusImage4,
+      image: "/kisumu-campus.jpg",
       description: "Located in the lakeside city, offering diverse programs."
     },
     {
       name: "NAKURU CAMPUS",
       phone: "0711488302",
-      image: campusImage5,
+      image: "/nakuru-campus.jpg",
       description: "Central location serving students across Kenya."
     },
     {
       name: "MARALAL CAMPUS",
       phone: "0723555999",
-      image: campusImage6,
+      image: "/nakuru.jpg",
       description: "Bringing quality education to Northern Kenya."
     }
   ];
@@ -101,21 +93,21 @@ const CampusesSection = () => {
         </div>
 
         {/* Special Offer Section */}
-<div className="mt-16">
-  <div className="bg-gradient-to-r from-red-600 to-blue-800 text-white p-8 rounded-xl text-center">
-    <h3 className="text-3xl font-bold mb-4">SPECIAL OFFER ON 14 COMPUTER PACKAGES</h3>
-    <p className="text-xl mb-6 max-w-4xl mx-auto">
-      We offer special offers on 14 computer packages and partial sponsorship for the same if you pursue 
-      Artisan, Certificate or Diploma Course at AIRADS College.
-    </p>
-    <Link
-      to="/admissions/procedure"
-      className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-    >
-      Learn More About Offers
-    </Link>
-  </div>
-</div>
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-red-600 to-blue-800 text-white p-8 rounded-xl text-center">
+            <h3 className="text-3xl font-bold mb-4">SPECIAL OFFER ON 14 COMPUTER PACKAGES</h3>
+            <p className="text-xl mb-6 max-w-4xl mx-auto">
+              We offer special offers on 14 computer packages and partial sponsorship for the same if you pursue 
+              Artisan, Certificate or Diploma Course at AIRADS College.
+            </p>
+            <Link
+              to="/admissions/procedure"
+              className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Learn More About Offers
+            </Link>
+          </div>
+        </div>
 
       </div>
     </section>

@@ -1,6 +1,4 @@
 import { Phone, MessageCircle, MapPin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 
 interface ContactCardProps {
   phone: string;
@@ -10,20 +8,20 @@ interface ContactCardProps {
   className?: string;
 }
 
-const ContactCard = ({ phone, whatsapp, email, address, className }: ContactCardProps) => {
+const ContactCard = ({ phone, whatsapp, email, address, className = '' }: ContactCardProps) => {
   return (
-    <Card className={`bg-white shadow-card border-0 hover:shadow-elegant transition-smooth ${className}`}>
-      <CardContent className="p-8">
-        <h3 className="text-xl font-semibold text-foreground mb-6">Contact Information</h3>
+    <div className={`bg-white rounded-lg shadow-lg border-0 hover:shadow-xl transition-all duration-300 ${className}`}>
+      <div className="p-8">
+        <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
         
         <div className="space-y-4">
           <div className="flex items-center gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-red-600 rounded-xl flex items-center justify-center">
               <Phone className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Phone</p>
-              <a href={`tel:${phone}`} className="text-primary font-medium hover:text-primary-dark transition-smooth">
+              <p className="text-sm text-gray-500">Phone</p>
+              <a href={`tel:${phone}`} className="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300">
                 {phone}
               </a>
             </div>
@@ -31,14 +29,14 @@ const ContactCard = ({ phone, whatsapp, email, address, className }: ContactCard
 
           {whatsapp && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-success rounded-xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">WhatsApp</p>
+                <p className="text-sm text-gray-500">WhatsApp</p>
                 <a 
                   href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`} 
-                  className="text-success font-medium hover:opacity-80 transition-smooth"
+                  className="text-green-600 font-medium hover:text-green-700 transition-colors duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -50,14 +48,14 @@ const ContactCard = ({ phone, whatsapp, email, address, className }: ContactCard
 
           {email && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Email</p>
+                <p className="text-sm text-gray-500">Email</p>
                 <a 
                   href={`mailto:${email}`} 
-                  className="text-secondary font-medium hover:opacity-80 transition-smooth"
+                  className="text-purple-600 font-medium hover:text-purple-700 transition-colors duration-300"
                 >
                   {email}
                 </a>
@@ -67,27 +65,34 @@ const ContactCard = ({ phone, whatsapp, email, address, className }: ContactCard
 
           {address && (
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-muted rounded-xl flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-muted-foreground" />
+              <div className="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-gray-600" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Address</p>
-                <p className="text-foreground font-medium">{address}</p>
+                <p className="text-sm text-gray-500">Address</p>
+                <p className="text-gray-900 font-medium">{address}</p>
               </div>
             </div>
           )}
         </div>
 
         <div className="mt-8 space-y-3">
-          <Button className="w-full bg-gradient-primary hover:shadow-glow transition-spring">
+          <a 
+            href="https://admissions.airads.ac.ke/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full block text-center bg-gradient-to-r from-blue-600 to-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
             Apply Now
-          </Button>
-          <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-smooth">
+          </a>
+          <button 
+            className="w-full border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+          >
             Learn More
-          </Button>
+          </button>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
 
