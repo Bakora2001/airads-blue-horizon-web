@@ -7,10 +7,10 @@ const HeroSection = () => {
     'src/public/6.7.JPG',
     'src/public/7.1.JPG',
     'src/public/11.jpg',
-    '/14 (2).jpg',
-    '/17.jpg',
-    '/31.jpg',
-    '/image33.jpg'
+    'src/public/14 (2).jpg',
+    'src/public/17.jpg',
+    'src/public/31.jpg',
+    '../public/image33.jpg'
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
