@@ -100,12 +100,12 @@ const SchoolOfHospitalityTourism = () => {
       
       {/* Hero Section with Blue Theme */}
       <section 
-        className="relative py-20 text-white overflow-hidden"
+        className="mt-24 relative py-20 text-white overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #1d4ed8 100%)'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white"></div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

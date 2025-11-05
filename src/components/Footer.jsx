@@ -104,7 +104,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
-              © Copyright AIRADS College 2024. All rights reserved.
+              © Copyright AIRADS College 2025. All rights reserved.
             </p>
             <p className="text-gray-400 mt-2 md:mt-0">
               Designed and Developed by{" "}

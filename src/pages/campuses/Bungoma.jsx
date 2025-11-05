@@ -14,7 +14,7 @@ const PageLayout = ({ children, title, subtitle, backgroundImage }) => {
       
       {/* Hero Section */}
       <section 
-        className="relative py-24 px-4 overflow-hidden"
+        className="mt-24 relative py-24 px-4 overflow-hidden"
         style={{ 
           background: `linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)`,
           ...(backgroundImage && {

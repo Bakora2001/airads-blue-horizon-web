@@ -131,7 +131,7 @@ const NitaCourses = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="mt-24 from-blue-900 via-blue-800 to-blue-700 text-white min-h-screen bg-background">
       <TopNavbar />
       <MainNavbar />
       

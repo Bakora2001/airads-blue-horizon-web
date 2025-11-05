@@ -1,8 +1,6 @@
-
 import { useState, useRef } from "react";
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import logo from "/airads-logo.png";
-// import logo from "../public/airads-logo.png";
 
 // Simple Link component replacement
 const Link = ({ to, onClick, className, children }) => (
@@ -287,17 +285,17 @@ const MainNavbar = () => {
               </div>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="lg:hidden">
+            {/* Mobile menu button - NOW MORE VISIBLE */}
+            <div className="lg:hidden flex items-center">
               <button 
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-blue-600 p-2"
+                className="text-gray-700 hover:text-blue-600 p-3 rounded-lg hover:bg-gray-100 transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-8 w-8" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-8 w-8" />
                 )}
               </button>
             </div>

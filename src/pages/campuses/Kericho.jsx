@@ -14,13 +14,14 @@ const PageLayout = ({ children, title, subtitle, backgroundImage }) => {
       
       {/* Hero Section */}
       <section 
-        className="relative py-24 px-4 overflow-hidden"
-        style={{
-          background: backgroundImage 
-            ? `linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%), url(${backgroundImage})`
-            : 'linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(59, 130, 246) 100%)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+        className="mt-24 relative py-24 px-4 overflow-hidden"
+         style={{ 
+          background: `linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)`,
+          ...(backgroundImage && {
+            backgroundImage: `linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%), url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          })
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-blue-700/90 to-blue-500/90"></div>
