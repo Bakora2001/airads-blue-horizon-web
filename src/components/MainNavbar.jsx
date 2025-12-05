@@ -286,16 +286,16 @@ const MainNavbar = () => {
             </div>
 
             {/* Mobile Hamburger Menu Button */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center flex-shrink-0 ml-2">
               <button 
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-blue-600 p-2 rounded-lg hover:bg-gray-100 transition-colors border-2 border-gray-300"
+                className="text-white bg-blue-600 hover:bg-blue-700 p-3 rounded-lg transition-colors shadow-lg"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="h-7 w-7" />
+                  <X className="h-8 w-8" />
                 ) : (
-                  <Menu className="h-7 w-7" />
+                  <Menu className="h-8 w-8" />
                 )}
               </button>
             </div>
