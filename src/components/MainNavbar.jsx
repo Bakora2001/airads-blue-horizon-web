@@ -75,7 +75,7 @@ const MainNavbar = () => {
       <nav className="fixed top-6 left-0 w-full z-40 bg-white/90 backdrop-blur-sm shadow-sm mb-8">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-3 gap-4">
-            {/* Logo Section - Takes more space */}
+            {/* Logo Section */}
             <div className="flex items-center flex-shrink-0 flex-grow max-w-3xl">
               <Link to="/" onClick={closeMobileMenu} className="flex items-center space-x-4">
                 <img 
@@ -94,7 +94,7 @@ const MainNavbar = () => {
               </Link>
             </div>
 
-            {/* Desktop Navigation Menu - Compact */}
+            {/* Desktop Navigation Menu */}
             <div className="hidden lg:flex items-center justify-end space-x-1 xl:space-x-2 flex-shrink-0">
               <Link to="/" className="text-gray-700 hover:text-blue-600 font-normal transition-colors text-xs whitespace-nowrap py-1 px-1">
                 Home
@@ -285,17 +285,17 @@ const MainNavbar = () => {
               </div>
             </div>
 
-            {/* Mobile menu button - NOW MORE VISIBLE */}
+            {/* Mobile Hamburger Menu Button */}
             <div className="lg:hidden flex items-center">
               <button 
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-blue-600 p-3 rounded-lg hover:bg-gray-100 transition-colors"
+                className="text-gray-700 hover:text-blue-600 p-2 rounded-lg hover:bg-gray-100 transition-colors border-2 border-gray-300"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="h-8 w-8" />
+                  <X className="h-7 w-7" />
                 ) : (
-                  <Menu className="h-8 w-8" />
+                  <Menu className="h-7 w-7" />
                 )}
               </button>
             </div>
@@ -303,34 +303,36 @@ const MainNavbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Dark background */}
       {mobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={closeMobileMenu}
         />
       )}
 
-      {/* Mobile Menu Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 lg:hidden ${
+      {/* Mobile Menu Sidebar Drawer */}
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
         mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
+        {/* Drawer Header */}
+        <div className="flex justify-between items-center p-4 border-b bg-blue-600">
+          <h2 className="text-lg font-semibold text-white">Menu</h2>
           <button 
             onClick={closeMobileMenu}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-white hover:text-gray-200 p-1"
           >
             <X className="h-6 w-6" />
           </button>
         </div>
         
+        {/* Drawer Content */}
         <div className="overflow-y-auto h-full pb-20">
           <nav className="p-4 space-y-2">
             <Link 
               to="/" 
               onClick={closeMobileMenu}
-              className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+              className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
             >
               Home
             </Link>
@@ -339,17 +341,17 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('about')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 About Us
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'about' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'about' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'about' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/about/mission" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/about/mission" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Mission and Vision
                   </Link>
-                  <Link to="/about/history" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/about/history" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Our History
                   </Link>
                 </div>
@@ -360,23 +362,23 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('admissions')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 Admissions
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'admissions' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'admissions' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'admissions' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/admissions/procedure" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/admissions/procedure" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Application Procedure
                   </Link>
-                  <Link to="/admissions/forms" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/admissions/forms" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Application Forms
                   </Link>
-                  <a href="https://admissions.airads.ac.ke/" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href="https://admissions.airads.ac.ke/" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Apply Online
                   </a>
-                  <Link to="/admissions/career-guide" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/admissions/career-guide" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Career Guide & Prospectus
                   </Link>
                 </div>
@@ -387,35 +389,35 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('campuses')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 Campuses
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'campuses' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'campuses' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'campuses' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/campuses/bungoma" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/bungoma" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Bungoma
                   </Link>
-                  <Link to="/campuses/kericho" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/kericho" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Kericho
                   </Link>
-                  <Link to="/campuses/eldoret" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/eldoret" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Eldoret
                   </Link>
-                  <Link to="/campuses/kisumu" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/kisumu" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Kisumu
                   </Link>
-                  <Link to="/campuses/nakuru" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/nakuru" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Nakuru
                   </Link>
-                  <Link to="/campuses/lodwar" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/lodwar" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Lodwar
                   </Link>
-                  <Link to="/campuses/maralal" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/maralal" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Maralal
                   </Link>
-                  <Link to="/campuses/virtual" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/campuses/virtual" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Virtual Campus
                   </Link>
                 </div>
@@ -426,29 +428,29 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('schools')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 Schools
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'schools' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'schools' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'schools' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/schools/engineering-ict" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/engineering-ict" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     School of Engineering and ICT
                   </Link>
-                  <Link to="/schools/hospitality-tourism" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/hospitality-tourism" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     School of Hospitality and Tourism MGT
                   </Link>
-                  <Link to="/schools/health-social" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/health-social" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     School of Health and Social Sciences
                   </Link>
-                  <Link to="/schools/beauty-hairdressing" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/beauty-hairdressing" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     School of Beauty and Hair dressing
                   </Link>
-                  <Link to="/schools/media" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/media" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     School of Media
                   </Link>
-                  <Link to="/schools/nita-courses" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/schools/nita-courses" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     NITA courses & Short Courses
                   </Link>
                 </div>
@@ -459,14 +461,14 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('news')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 Events
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'news' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'news' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'news' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/news/latest" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/news/latest" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Events & News
                   </Link>
                 </div>
@@ -476,7 +478,7 @@ const MainNavbar = () => {
             <Link 
               to="/students" 
               onClick={closeMobileMenu}
-              className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+              className="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
             >
               Students
             </Link>
@@ -485,14 +487,14 @@ const MainNavbar = () => {
             <div>
               <button
                 onClick={() => toggleMobileDropdown('contact')}
-                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
               >
                 Contact Us
-                <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdownOpen === 'contact' ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`h-5 w-5 transition-transform ${mobileDropdownOpen === 'contact' ? 'rotate-90' : ''}`} />
               </button>
               {mobileDropdownOpen === 'contact' && (
                 <div className="ml-4 mt-2 space-y-1">
-                  <Link to="/contact/" onClick={closeMobileMenu} className="block py-2 px-4 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <Link to="/contact/" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Our Contacts
                   </Link>
                 </div>
