@@ -77,7 +77,7 @@ const WelcomeSection = () => {
             <div className="lg:col-span-2 relative">
               <div className="h-full min-h-[400px] lg:min-h-[500px] relative overflow-hidden">
                 <img 
-                  src="/src/public/ceo-min.png" 
+                  src="/ceo-min.png" 
                   alt="AIRADS College CEO" 
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
