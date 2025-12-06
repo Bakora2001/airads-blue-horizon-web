@@ -83,7 +83,9 @@ const App = () => (
           <Route path="/admissions/career-guide" element={<CareerGuide />} />
           
           {/* Admin Upload Route */}
-          <Route path="/upload" element={<UploadPage />} />
+          {/* Admin Upload Route */}
+            <Route path="/upload" element={<UploadPage />} />
+            <Route path="/Upload" element={<UploadPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
