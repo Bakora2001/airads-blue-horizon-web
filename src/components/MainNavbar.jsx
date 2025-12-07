@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
-import logo from "/airads-logo.png";
 
 // Simple Link component replacement
 const Link = ({ to, onClick, className, children }) => (
@@ -75,11 +74,27 @@ const MainNavbar = () => {
       <nav className="fixed top-6 left-0 w-full z-40 bg-white/90 backdrop-blur-sm shadow-sm mb-8">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-3 gap-4">
+            {/* Mobile Hamburger Menu Button - MOVED TO LEFT */}
+            <div className="lg:hidden flex items-center flex-shrink-0 order-first">
+              <button 
+                onClick={toggleMobileMenu}
+                className="text-white bg-blue-600 hover:bg-blue-700 p-2.5 rounded-lg transition-colors shadow-lg flex items-center justify-center mr-3"
+                aria-label="Toggle mobile menu"
+                style={{ minWidth: '44px', minHeight: '44px' }}
+              >
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
+
             {/* Logo Section */}
             <div className="flex items-center flex-shrink-0 flex-grow max-w-3xl">
               <Link to="/" onClick={closeMobileMenu} className="flex items-center space-x-4">
                 <img 
-                  src={logo} 
+                  src="/airads-logo.png" 
                   alt="AIRADS College Logo" 
                   className="h-16 md:h-20 w-auto flex-shrink-0" 
                 />
@@ -285,20 +300,8 @@ const MainNavbar = () => {
               </div>
             </div>
 
-            {/* Mobile Hamburger Menu Button */}
-            <div className="lg:hidden flex items-center flex-shrink-0 ml-2">
-              <button 
-                onClick={toggleMobileMenu}
-                className="text-white bg-blue-600 hover:bg-blue-700 p-3 rounded-lg transition-colors shadow-lg"
-                aria-label="Toggle mobile menu"
-              >
-                {mobileMenuOpen ? (
-                  <X className="h-8 w-8" />
-                ) : (
-                  <Menu className="h-8 w-8" />
-                )}
-              </button>
-            </div>
+            {/* Empty div for layout balance on mobile - hamburger is on left */}
+            <div className="lg:hidden w-11"></div>
           </div>
         </div>
       </nav>

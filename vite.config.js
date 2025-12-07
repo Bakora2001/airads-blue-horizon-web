@@ -19,6 +19,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       external: [],
       output: {
@@ -31,4 +33,6 @@ export default defineConfig(({ mode }) => ({
     // Raise chunk size warning limit to 1MB to suppress unnecessary warnings
     chunkSizeWarningLimit: 1000,
   },
+  // Ensure proper base path for production
+  base: '/',
 }));
