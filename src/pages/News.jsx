@@ -6,22 +6,22 @@ import Footer from "../components/Footer";
 const News = () => {
   const newsItems = [
     {
-      title: "August 2025 INTAKE ONGOING",
-      date: "June 15, 2025",
+      title: "January 2026 INTAKE ONGOING",
+      date: "January 5th, 2026",
       category: "Admissions",
-      excerpt: "Applications are now open for the July 2025 intake across all our campuses. Join us for quality technical education.",
+      excerpt: "Applications are now open for the July 2026 intake across all our campuses. Join us for quality technical education.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
     },
     {
       title: "Special Computer Packages Offer",
-      date: "June 10, 2025", 
+      date: "June 10, 2026", 
       category: "Programs",
       excerpt: "Take advantage of our special offer on 14 computer packages with partial sponsorship opportunities.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
     },
     {
       title: "New Campus Opening in Maralal",
-      date: "May 20, 2025",
+      date: "May 20, 2026",
       category: "Campus News",
       excerpt: "We are excited to announce the opening of our newest campus in Maralal, bringing quality education to Northern Kenya.",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
@@ -31,21 +31,21 @@ const News = () => {
   const events = [
     {
       title: "Career Guidance Workshop",
-      date: "July 5, 2025",
+      date: "July 5, 2026",
       time: "10:00 AM - 3:00 PM",
       location: "All Campuses",
       description: "Free career guidance workshop for prospective students and parents."
     },
     {
       title: "Industrial Attachment Fair",
-      date: "July 12, 2025", 
+      date: "July 12, 2026", 
       time: "9:00 AM - 4:00 PM",
       location: "Nakuru Campus",
       description: "Meet with industry partners and secure attachment opportunities."
     },
     {
       title: "Annual Sports Day",
-      date: "July 20, 2025",
+      date: "July 20, 2026",
       time: "8:00 AM - 5:00 PM", 
       location: "Eldoret Campus",
       description: "Inter-campus sports competitions and talent showcase."

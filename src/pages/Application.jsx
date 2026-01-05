@@ -147,7 +147,7 @@ const Application = () => {
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <Badge className="mb-6 text-lg px-6 py-2 bg-gradient-to-r from-airads-blue to-airads-red text-white border-0">
-              September 2025 INTAKE NOW OPEN
+              January 2026 INTAKE NOW OPEN
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-airads-blue to-airads-red bg-clip-text text-transparent">
               AFRICAN INSTITUTE OF RESEARCH<br />
@@ -355,7 +355,7 @@ const Application = () => {
                   <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
                     <Calendar className="mr-2 h-5 w-5" />
-                    Apply for August 2025 Intake
+                    Apply for January 2026 Intake
                   </Button>
                 </a>
                 <a href="https://airads.ac.ke/bronchure/UNIVERSAL%20BROCHURE-compressed.pdf" target="_blank" rel="noopener noreferrer">
@@ -382,7 +382,7 @@ const Application = () => {
             <Twitter className="h-6 w-6 text-airads-blue hover:text-airads-red transition-colors cursor-pointer" />
           </div>
           <p className="text-sm text-gray-500">
-            © 2025 AIRADS College. All rights reserved. | TVETA Registered and Licensed
+            © 2026 AIRADS College. All rights reserved. | TVETA Registered and Licensed
           </p>
         </div>
       </footer>

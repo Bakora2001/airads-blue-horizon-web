@@ -505,7 +505,7 @@ const CareerGuide = () => {
             <Badge className="bg-airads-red/20 text-airads-red border-airads-red">Prospectus</Badge>
           </div>
           <p className="text-sm text-gray-500">
-            © 2025 AIRADS College. All rights reserved. | A Centre of Excellence Where Quality is Nurtured
+            © 2026 AIRADS College. All rights reserved. | A Centre of Excellence Where Quality is Nurtured
           </p>
         </div>
       </footer>
