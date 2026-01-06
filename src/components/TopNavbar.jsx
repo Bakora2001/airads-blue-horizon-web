@@ -13,7 +13,7 @@ const TopNavbar = () => {
             <a href="https://tveta.go.ke" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
               TVETA
             </a>
-            <a href="https://cdacc.ac.ke" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
+            <a href="https://tvetcdacc.go.ke/" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
               TVETA-CDACC
             </a>
             <a href="https://knec.ac.ke" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
