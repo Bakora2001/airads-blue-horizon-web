@@ -166,7 +166,7 @@ const Application = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gradient-to-r from-airads-blue to-airads-blue-dark hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                   <Globe className="mr-2 h-5 w-5" />
                   Apply Online Now
@@ -352,7 +352,7 @@ const Application = () => {
                 Join thousands of successful graduates from AIRADS College
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="secondary" className="bg-white text-airads-blue hover:bg-gray-100">
                     <Calendar className="mr-2 h-5 w-5" />
                     Apply for January 2026 Intake

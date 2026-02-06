@@ -255,7 +255,7 @@ const CoursesSection = () => {
             <h3 className="text-3xl font-bold mb-4">JANUARY 2026 INTAKE ONGOING</h3>
             <p className="text-xl mb-6">Intake in Progress in all our Campuses</p>
             <a
-              href="https://admissions.airads.ac.ke/"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"

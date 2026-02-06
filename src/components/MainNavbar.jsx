@@ -161,7 +161,7 @@ const MainNavbar = () => {
                     <Link to="/admissions/forms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Application Forms
                     </Link>
-                    <a href="https://admissions.airads.ac.ke/" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Apply Online
                     </a>
                     <Link to="/admissions/career-guide" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
@@ -378,7 +378,7 @@ const MainNavbar = () => {
                   <Link to="/admissions/forms" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Application Forms
                   </Link>
-                  <a href="https://admissions.airads.ac.ke/" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                     Apply Online
                   </a>
                   <Link to="/admissions/career-guide" onClick={closeMobileMenu} className="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">

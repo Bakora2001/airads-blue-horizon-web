@@ -251,7 +251,7 @@ const Mission = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                          <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer">
+                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" target="_blank" rel="noopener noreferrer">
               <button className="group relative bg-white text-blue-900 px-12 py-5 rounded-full font-bold text-lg overflow-hidden shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center justify-center group-hover:text-white transition-colors">

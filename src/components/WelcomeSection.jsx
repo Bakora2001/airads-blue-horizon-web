@@ -215,13 +215,13 @@ const WelcomeSection = () => {
                   </div>
                   <p className="text-blue-100 mb-3">Visit our website to apply online</p>
                   <a 
-                    href="https://admissions.airads.ac.ke/" 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-white/10 hover:bg-white/30 p-3 rounded-lg transition-all duration-300 w-full block text-left group"
                   >
                     <span className="text-yellow-200 font-semibold group-hover:text-yellow-100">
-                      🌐 https://admissions.airads.ac.ke/
+                      🌐 Airads Admission Form
                     </span>
                   </a>
             </div>

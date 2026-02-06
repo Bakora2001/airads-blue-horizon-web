@@ -129,7 +129,7 @@ const Footer = () => {
 
         {/* Apply Now Button */}
         <a
-          href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" target="_blank" rel="noopener noreferrer"
           className="bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors text-center block"
         >
           Apply Now

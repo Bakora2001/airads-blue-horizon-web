@@ -78,7 +78,7 @@ const ContactCard = ({ phone, whatsapp, email, address, className = '' }: Contac
 
         <div className="mt-8 space-y-3">
           <a 
-            href="https://admissions.airads.ac.ke/"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full block text-center bg-gradient-to-r from-blue-600 to-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"

@@ -7,7 +7,7 @@ const TopNavbar = () => {
         <div className="flex justify-between items-center">
           <div className="text-xs">Quick Links:</div>
           <div className="flex space-x-4 text-xs">
-            <a href="https://admissions.airads.ac.ke/" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl9v2WYIAbX41Wo2LyrUjhSZucHuvytgoYxd9Elq1yFSV0ig/alreadyresponded" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
               Online Admissions
             </a>
             <a href="https://tveta.go.ke" target="_blank" rel="noopener noreferrer" className="hover:text-red-300 transition-colors">
